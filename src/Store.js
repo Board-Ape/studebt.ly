@@ -6,7 +6,7 @@ import {
 import thunk from 'redux-thunk';
 import promise from 'redux-promise';
 // import logger from 'redux-logger';
-// import rootReducer from './reducers';
+import rootReducer from './reducers';
 
 const devTools =
   window.__REDUX_DEVTOOLS_EXTENSION__
@@ -14,7 +14,7 @@ const devTools =
 const middleware = applyMiddleware(thunk, promise);
 
 const Store = createStore(
-  // rootReducer,
+  rootReducer,
   compose(
     middleware,
     devTools
