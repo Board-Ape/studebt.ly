@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SchoolCard = () => {
+const SchoolCard = (props) => {
   return (
     <div>
-      School Card
+      {props.school['school.name']}
     </div>
   )
 }

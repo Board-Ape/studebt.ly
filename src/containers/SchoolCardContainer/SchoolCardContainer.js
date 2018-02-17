@@ -10,18 +10,31 @@ class SchoolCardContainer extends Component {
     this.props.storeSchoolData(schoolData)
   }
 
+  renderSchoolContainer = () => {
+    const schoolArray = this.props.schoolNames.map((school, index) => {
+      return(
+        <div>
+          <SchoolCard
+            key={index}
+            school={school}
+          />
+        </div>
+      )
+    });
+    return schoolArray
+  }
+
   render() {
     return(
       <div>
-        <SchoolCard />
+        {this.renderSchoolContainer()}
       </div>
     )
   }
 }
-
 export const mapStateToProps = (store) => {
   return {
-    schoolNames: store.schoolNames
+    schoolNames: store.schoolDataReducer
   }
 }
 
