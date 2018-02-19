@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SchoolCard from '../../components/SchoolCard/SchoolCard'
 import { fetchSchoolData } from '../../actions'
+import './SchoolCardContainer.css'
 
 class SchoolCardContainer extends Component {
 
@@ -26,7 +27,7 @@ class SchoolCardContainer extends Component {
 
   render() {
     return(
-      <div>
+      <div className="card-container">
         {this.renderSchoolContainer()}
       </div>
     )
