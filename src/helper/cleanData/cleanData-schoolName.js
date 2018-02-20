@@ -1,7 +1,7 @@
 export const cleanData = (schoolObject) => {
   return schoolObject.results.map(schoolObject => {
     console.log(schoolObject);
-    const appendPrefix = 'https://'
+    const appendPrefix = 'http://'
     const checkHTTPS = new RegExp("^(http|https)://(.*)")
     const string = schoolObject['school.school_url']
     const testString = checkHTTPS.test(string)

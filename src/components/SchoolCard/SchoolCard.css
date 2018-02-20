@@ -4,6 +4,7 @@
 }
 
 .all-cards {
+  font-family: 'Philosopher', sans-serif;
   display: inline-block;
   height: 300px;
   width: 400px;
@@ -20,15 +21,20 @@
   width: 90%;
 }
 
-.location {
-  font-size: 16px;
+.placeholder-icon {
+  height: 12px;
 }
 
 .school-name {
-  font-size: 24px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  font-weight: 400;
 }
 
-
+.location {
+  margin-top: 4px;
+  font-size: 12px;
+}
 
 .url {
   width: 90%;
