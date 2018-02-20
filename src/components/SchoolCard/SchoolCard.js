@@ -5,11 +5,13 @@ const SchoolCard = (props) => {
   return (
     <div className='all-cards-container'>
       <div className='all-cards'>
-        <h1 className='school school-name'>{props.school['school.name']}</h1>
-        <h2 className='school school-state'>{props.school['school.state']}</h2>
-        <h2 className='school school-city'>{props.school['school.city']}</h2>
-        <h2 className='school school-zip'>{props.school['school.zip']}</h2>
-        <h2 className='school school-school-url'>{props.school['school.school_url']}</h2>
+        <h1 className='school school-name'>{props.school.name}</h1>
+        <h2 className='school school-in-state-tuition'>Tuition In-State: ${props.school.tuitionInState}</h2>
+        <h2 className='school school-out-of-state-tuition'>Tuition Out-Of-State: ${props.school.tuitionOutState}</h2>
+        <h2 className='school location school-state'>{props.school.state}</h2>
+        <h2 className='school location school-city'>{props.school.city}</h2>
+        <h2 className='school location school-zip'>{props.school.zip}</h2>
+        <div className='school url'><a className='location school-url' href={props.school.url} target='_blank'>Visit Their Website</a></div>
       </div>
     </div>
   )
