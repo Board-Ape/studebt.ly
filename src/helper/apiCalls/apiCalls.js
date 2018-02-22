@@ -1,22 +1,22 @@
 import { cleanData } from '../cleanData/cleanData-schoolName'
 
+const knex = require('knex')({
+  client: 'pg',
+  connection: 'postgres://localhost/studebtly',
+});
 // knex('colleges').select('*').then(res => console.log(res))
 
-export const getSchoolData = () => {
+export const getSchoolData = async () => {
   console.log('In apiCalls');
   try {
-  const knex = require('knex')({
-    client: 'pg',
-    connection: 'postgres://localhost/studebtly',
-  });
 
   console.log('In apiCalls try block');
-  console.log(knex('colleges').select('*').then(res => res).then(object => object.json()))
-    .then(response => console.log(response))
-    .then(responseObject => console.log(responseObject))
-  // const cleanSchoolData = cleanData(responseObject);
+  const initialFetch = knex('colleges').select('*')
+  console.log(initialFetch);
+  const responseObject = initialFetch.json();
+  const cleanSchoolData = await cleanData(responseObject);
 
-  return
+  return cleanSchoolData;
   } catch (type) {
     return Error('Fetch schools was unsuccessful!')
   }
