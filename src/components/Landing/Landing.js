@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import Particles from 'react-particles-js';
+import './Landing.css'
 
 class Landing extends Component{
 
     render(){
         return (
+          <div className='particle-container'>
             <Particles
               style={{
                 background: "#77A0A9"
@@ -118,9 +120,9 @@ class Landing extends Component{
               },
               "retina_detect": true}}
              />
+          </div>
         );
     };
-
 }
 
 export default Landing;
