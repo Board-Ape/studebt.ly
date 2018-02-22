@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import NavBar from '../../components/NavBar/NavBar'
-import Landing from '../../components/Landing/Landing'
-import SchoolCardContainer from '../../containers/SchoolCardContainer/SchoolCardContainer'
+import NavBar from '../../components/NavBar/NavBar';
+import Landing from '../../components/Landing/Landing';
+import SchoolCardContainer from '../../containers/SchoolCardContainer/SchoolCardContainer';
 
 class App extends Component {
   render() {

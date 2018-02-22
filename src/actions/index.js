@@ -6,6 +6,7 @@ export const schoolDataSuccess = (schools) => ({
 });
 
 export const fetchSchoolData = () => async (dispatch) => {
-    const responseObject = await getSchoolData()
-    dispatch(schoolDataSuccess(responseObject))
-}
+    console.log('In the actions');
+    const responseObject = await getSchoolData();
+    dispatch(schoolDataSuccess(responseObject));
+};
